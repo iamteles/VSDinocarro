@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				270,
+				-70
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				364,
+				-119
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				381,
+				-181
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				224,
+				9
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				196,
+				-120
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right0",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/CARRO 2",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "dinoCarro",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		216,
+		81
+	],
+	"camera_position": [
+		-300,
+		190
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
