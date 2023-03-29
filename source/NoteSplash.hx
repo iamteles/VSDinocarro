@@ -49,12 +49,24 @@ class NoteSplash extends FlxSprite
 
 	function loadAnims(skin:String) {
 		frames = Paths.getSparrowAtlas(skin);
-		for (i in 1...3) {
-			animation.addByPrefix("note1-" + i, "note splash blue " + i, 24, false);
-			animation.addByPrefix("note2-" + i, "note splash green " + i, 24, false);
-			animation.addByPrefix("note0-" + i, "note splash purple " + i, 24, false);
-			animation.addByPrefix("note3-" + i, "note splash red " + i, 24, false);
+
+		switch (skin) {
+			case 'WARN_splashes':
+				for (i in 1...3) {
+					animation.addByPrefix("note1-" + i, "warn splash", 24, false);
+					animation.addByPrefix("note2-" + i, "warn splash", 24, false);
+					animation.addByPrefix("note0-" + i, "warn splash", 24, false);
+					animation.addByPrefix("note3-" + i, "warn splash", 24, false);
+				}
+			default:
+				for (i in 1...3) {
+					animation.addByPrefix("note1-" + i, "note splash blue " + i, 24, false);
+					animation.addByPrefix("note2-" + i, "note splash green " + i, 24, false);
+					animation.addByPrefix("note0-" + i, "note splash purple " + i, 24, false);
+					animation.addByPrefix("note3-" + i, "note splash red " + i, 24, false);
+				}
 		}
+
 	}
 
 	override function update(elapsed:Float) {

@@ -1,0 +1,20 @@
+{
+	"songs": [
+		["Fossilized", "dino", [165, 0, 77]]
+	],
+
+	"weekCharacters": [
+		"",
+		"bf",
+		"gf"
+	],
+	"weekBackground": "fossil",
+
+	"storyName": "",
+	"weekBefore": "thermalocity",
+	"weekName": "VS DINOCARRO",
+	"startUnlocked": false,
+
+	"hideStoryMode": false,
+	"hideFreeplay": false
+}

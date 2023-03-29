@@ -24,6 +24,7 @@ using StringTools;
 class CreditsState extends MusicBeatState
 {
 	var curSelected:Int = -1;
+	var curIcon:Int = 1;
 
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private var iconArray:Array<AttachedSprite> = [];
@@ -81,6 +82,16 @@ class CreditsState extends MusicBeatState
 		#end
 
 		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
+			["Dinocarro's PNG Chaos Team"],
+			['teles', 'teles', 'Artist, Musician, Coder, Animator', 'https://www.youtube.com/channel/UCHK83AQBjAc9sy0lE6m8e3A', '444444'],
+			['Xarion', 'xar' ,'Charter', 'https://twitter.com/Xar1on', '444444'],
+			['Leozito', 'leo' ,'Voice Actor for Pinguim Pedro and Carrossaura', 'https://www.youtube.com/channel/UCfsqyinKiKsen2MiajkGogg', '444444'],
+			['BeastlyNiko', 'mudoku' ,'Icon Artist', 'https://twitter.com/Mudoku__', '444444'],
+			['Blaze', 'blaze' ,'Animator for Pinguim Pedro', 'https://www.youtube.com/channel/UC_Yc5o7jz72e7j4B70c_gpQ', '444444'],
+			['Astro_Galaxy', 'astro' ,'BG and Animation help', 'https://www.youtube.com/channel/UChhiMUkcTdDDpOiMPY0td5w', '444444'],
+			["Special Thanks"],
+			['Top 10 Portugal', 'top' ,'Top 10 Portugal', 'https://www.youtube.com/@TOP10Portugal/videos', '444444'],
+			['DiogoTV', 'diogo' ,'Translation Code', 'https://twitter.com/DiogoTVV', '444444'],
 			['Psych Engine Team'],
 			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',								'https://twitter.com/Shadow_Mario_',	'444444'],
 			['RiverOaken',			'river',			'Main Artist/Animator of Psych Engine',							'https://twitter.com/RiverOaken',		'B42F71'],
@@ -242,6 +253,15 @@ class CreditsState extends MusicBeatState
 	function changeSelection(change:Int = 0)
 	{
 		FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
+		if(!unselectableCheck(curSelected))
+			{
+				curIcon += change;
+				if (curIcon < 0)
+					curIcon = creditsStuff.length - 1;
+				if (curIcon >= creditsStuff.length)
+					curIcon = 0;
+			}
+
 		do {
 			curSelected += change;
 			if (curSelected < 0)
@@ -313,12 +333,8 @@ class CreditsState extends MusicBeatState
 	}
 	#end
 
-	function getCurrentBGColor() {
-		var bgColor:String = creditsStuff[curSelected][4];
-		if(!bgColor.startsWith('0x')) {
-			bgColor = '0xFF' + bgColor;
-		}
-		return Std.parseInt(bgColor);
+	function getCurrentBGColor(?icon:HealthIcon) {
+		return (iconArray[curIcon - 1] != null && creditsStuff[curSelected][0] != "Xarion") ? FlxColor.fromInt(CoolUtil.dominantColor(iconArray[curIcon - 1])) : FlxColor.WHITE;
 	}
 
 	private function unselectableCheck(num:Int):Bool {

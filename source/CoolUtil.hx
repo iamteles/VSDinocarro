@@ -7,6 +7,7 @@ import lime.utils.Assets as LimeAssets;
 import lime.utils.AssetLibrary;
 import lime.utils.AssetManifest;
 import flixel.system.FlxSound;
+import flixel.util.FlxColor;
 #if sys
 import sys.io.File;
 import sys.FileSystem;
@@ -150,5 +151,41 @@ class CoolUtil
 		return #if (flixel < "5.0.0") folder #else FlxG.stage.application.meta.get('company')
 			+ '/'
 			+ FlxSave.validate(FlxG.stage.application.meta.get('file')) #end;
+	}
+
+	public static function returnColor(str:String = ''):FlxColor
+	{
+		switch (str.toLowerCase())
+		{
+			case "black":
+				FlxColor.BLACK;
+			case "white":
+				FlxColor.WHITE;
+			case "blue":
+				FlxColor.BLUE;
+			case "brown":
+				FlxColor.BROWN;
+			case "cyan":
+				FlxColor.CYAN;
+			case "gray":
+				FlxColor.GRAY;
+			case "green":
+				FlxColor.GREEN;
+			case "lime":
+				FlxColor.LIME;
+			case "magenta":
+				FlxColor.MAGENTA;
+			case "orange":
+				FlxColor.ORANGE;
+			case "pink":
+				FlxColor.PINK;
+			case "purple":
+				FlxColor.PURPLE;
+			case "red":
+				FlxColor.RED;
+			case "transparent":
+				FlxColor.TRANSPARENT;
+		}
+		return FlxColor.WHITE;
 	}
 }

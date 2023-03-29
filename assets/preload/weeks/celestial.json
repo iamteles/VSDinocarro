@@ -1,0 +1,20 @@
+{
+	"songs": [
+		["Celestial", "dino", [165, 0, 77]]
+	],
+
+	"weekCharacters": [
+		"",
+		"bf",
+		"gf"
+	],
+	"weekBackground": "end",
+
+	"storyName": "",
+	"weekBefore": "illusionism",
+	"weekName": "VS DINOCARRO",
+	"startUnlocked": false,
+
+	"hideStoryMode": false,
+	"hideFreeplay": false
+}

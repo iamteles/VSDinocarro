@@ -1,0 +1,20 @@
+{
+	"songs": [
+		["Info", "dino", [165, 0, 77]]
+	],
+
+	"weekCharacters": [
+		"",
+		"bf",
+		"gf"
+	],
+	"weekBackground": "end",
+
+	"storyName": "",
+	"weekBefore": "illusionism",
+	"weekName": "VS DINOCARRO",
+	"startUnlocked": true,
+
+	"hideStoryMode": true,
+	"hideFreeplay": false
+}

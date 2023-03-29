@@ -1,0 +1,20 @@
+{
+	"songs": [
+		["Thermalocity", "dino", [165, 0, 77]]
+	],
+
+	"weekCharacters": [
+		"",
+		"bf",
+		"gf"
+	],
+	"weekBackground": "therm",
+
+	"storyName": "",
+	"weekBefore": "drifter",
+	"weekName": "VS DINOCARRO",
+	"startUnlocked": false,
+
+	"hideStoryMode": false,
+	"hideFreeplay": false
+}

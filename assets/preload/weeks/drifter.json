@@ -1,0 +1,20 @@
+{
+	"songs": [
+		["Drifter", "dino", [165, 0, 77]]
+	],
+
+	"weekCharacters": [
+		"",
+		"bf",
+		"gf"
+	],
+	"weekBackground": "drif",
+
+	"storyName": "",
+	"weekBefore": "tutorial",
+	"weekName": "VS DINOCARRO",
+	"startUnlocked": true,
+
+	"hideStoryMode": false,
+	"hideFreeplay": false
+}
